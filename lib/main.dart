@@ -1,4 +1,5 @@
  import 'package:flutter/material.dart';
+ import 'package:todoey_flutter/screens/task_screen.dart';
  void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -6,18 +7,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
-      title: 'Todoey',
-      home:Scaffold(
-      appBar: AppBar(
-        title: Text('Todoey'),
-      ),
-      body: Center(
-        child: Container(
-          child: Text('Hello World'),
-        ),
-       ),
-      ),
+       home: TasksScreen(),
     );
   }
 } //MateApp
