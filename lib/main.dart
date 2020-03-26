@@ -7,10 +7,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      title: 'Material App',
+      title: 'Todoey',
       home:Scaffold(
       appBar: AppBar(
-        title: Text('Material App Bar'),
+        title: Text('Todoey'),
       ),
       body: Center(
         child: Container(
