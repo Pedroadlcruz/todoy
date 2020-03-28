@@ -3,6 +3,8 @@ import 'package:todoey_flutter/models/task.dart';
 
 class TaskData extends ChangeNotifier{
 
+ 
+
  List<Task> tasks = [
   Task(name: 'Comprar Leche'),
   Task(name: 'Buy Mango'),
@@ -11,6 +13,11 @@ class TaskData extends ChangeNotifier{
 
 int  get taskCount {
   return tasks.length;
+}
+
+
+set newTaskTile (String value) {
+  tasks.add(value);
 }
 
 }
