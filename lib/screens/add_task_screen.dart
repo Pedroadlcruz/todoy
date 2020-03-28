@@ -57,7 +57,7 @@ AddTaskScreen(this.addTaskCallback);
                 ),
                 onPressed: (){                  
                 //  addTaskCallback(newTaskTitle);
-                 taskData.tasks.add(tasks.name =newTaskTitle);
+                 taskData.tasks.add();
                 },
               )
             ],
