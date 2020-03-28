@@ -1,12 +1,22 @@
-class Task{
+import 'package:flutter/material.dart';
+class Task with ChangeNotifier{
 
-final String  name;
+String  todoTask;
 bool isDone;
 
-Task({this.name, this.isDone = false});
+Task({this.todoTask, this.isDone = false});
+
+get name {
+  return todoTask;
+}
+set name (String name){
+  this.todoTask = name;
+  notifyListeners();
+}
 
 void toggleDone(){
   isDone = !isDone;
+  notifyListeners();
 }
 
 

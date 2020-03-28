@@ -1,16 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:todoey_flutter/models/task.dart';
-import 'package:todoey_flutter/widgets/task_list.dart';
+
 class AddTaskScreen extends StatelessWidget {
   
-final Function addTaskCallback;
+// final Function addTaskCallback;
 
-AddTaskScreen(this.addTaskCallback);
+// AddTaskScreen(this.addTaskCallback);
 
   @override
   Widget build(BuildContext context) {
+final newTaskTitle = Provider.of<Task>(context);
 
-  String newTaskTitle;  
+    List<Task> tasks = [
+  Task(todoTask:newTaskTitle.name = 'Buy Leche'),
+  Task(todoTask:newTaskTitle.name =  'Buy Casabe'),
+  Task(todoTask:newTaskTitle.name =  'Buy PAPAS'),
+];
+
+
+  // String newTaskTitle;  
+  
 
     return Container(
       color: Color(0xfff757575),
@@ -40,7 +50,7 @@ AddTaskScreen(this.addTaskCallback);
                 autofocus: true,
                 textAlign: TextAlign.center,
                 onChanged: (newtext) {
-                  newTaskTitle = newtext;
+                  newTaskTitle.name = newtext;
                 } ,
               ),
               SizedBox(height: 10.0,),
@@ -53,7 +63,9 @@ AddTaskScreen(this.addTaskCallback);
                 ),
                 ),
                 onPressed: (){                  
-                 addTaskCallback(newTaskTitle);
+                //  addTaskCallback(newTaskTitle);
+                tasks.add(Task(todoTask: newTaskTitle.name));
+               
                 },
               )
             ],
