@@ -29,4 +29,9 @@ void updateTask ( Task task){
   notifyListeners();
 }
 
+void deleteTask (Task task){
+  _tasks.remove(task);
+  notifyListeners();
+}
+
 }
